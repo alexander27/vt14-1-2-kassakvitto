@@ -22,7 +22,8 @@ var click = {
 			
 			// Fönstret kan nu öppnas
 			
-		
+			var url = "http://homepage.lnu.se/staff/tstjo/labbyServer/imgviewer/";
+
 			var container = document.getElementById("container");
 			
 			var popup = document.createElement("div");
@@ -43,6 +44,7 @@ var click = {
 			
 			var closeImg = document.createElement("img");
 			closeImg.setAttribute("src", "pics/kryss.png");
+			closeImg.setAttribute("id", "kryss");
 			var closeLink = document.createElement("a");
 			closeLink.setAttribute("href", "#");
 			closeLink.setAttribute("id", "closeImg");
@@ -51,7 +53,7 @@ var click = {
 			
 			var icon = document.createElement("img");
 			icon.setAttribute("src", "pics/jord.jpg");
-			icon.setAttribute("id", "icon");
+			icon.setAttribute("id", "icon1");
 			header.appendChild(icon);
 			
 			var iconText = document.createElement("p");
@@ -76,7 +78,6 @@ var click = {
 			var width = 0;
 			var height = 0;
 			
-			var url = "Backend/getJSONThumbs.php";
 			new Ajax(url, function callback(data){
 					
 				var recived = data;
@@ -92,8 +93,11 @@ var click = {
         		 
         		 var lotsOfPics = document.createElement("img");
         		 lotsOfPics.setAttribute("class", "lotsOfPics");
-        		 lotsOfPics.setAttribute("src", "pics/thrumbs" + read[i].fileName);
+        		 lotsOfPics.src = read[i].thumbURL;//:"http://homepage.lnu.se/staff/tstjo/labbyServer/imgviewer/";
+        	//	lotsOfPics.setAttribute("src", read[i].fileName);
         		 imgDiv.appendChild(lotsOfPics);
+        		 
+        		 
         		 
         		 
         		 var piclink = document.createElement("a");
@@ -105,11 +109,19 @@ var click = {
 				 
 				 lotsOfPics.onclick = function(e){
 				 	
-				 	var imgId = e.target.parentNode.getAttribute("id");
+				 // lotsOfPics = document.getElementById("")
+				 //bak.style['background']="url('"+url+"')";
+					
+				var imgId = e.target.parentNode.getAttribute("id");
 				 	
-        				console.log(read[imgId].fileName);
+        			//	console.log(read[imgDiv].;
         				
-        				document.body.style.background = "url(pics/"+ read[imgId].fileName +")";
+        				document.body.style.background = "url"+ read[i] +")";
+        			
+        	
+        			//imgId.style['background']="url('"+url+"')";
+					        			
+        			
         		}
 				 
         		 

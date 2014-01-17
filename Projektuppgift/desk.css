@@ -46,9 +46,10 @@ q:before, q:after {
     
 body { 
   background: url(pics/mario.jpg)no-repeat center center fixed; 
-    width:600px;
+   background-size:cover;
+   /* width:600px;
     height:600px;
-        
+     */   
   
 }
 #icon{
@@ -60,6 +61,11 @@ body {
     height:100px;
     
     
+}
+#icon1{
+
+width:40px;
+height:40px;
 }
 
 #popup
@@ -97,17 +103,19 @@ body {
 		background-color:gray;
 	}
 
-#closeImg
+#kryss
 	{
 	    
 		float:right;
-		width: 10px;
-		height:10px;
+		width: 20px;
+		height:20px;
 		
 	}
 	
 #loader
 	{
+		width:10px;
+		height:10px;	
 		padding: 0px 0px 0px 0px;
 		margin: 2px 0px 0px 0px;
 	}
@@ -133,7 +141,7 @@ body {
 .imgDiv
 	{
 		display:inline-block;
-		background-color:white;
+		background-color:gray;
 		padding: 0px 0px 0px 0px;
 		margin: 0px 0px 0px 0px;
 	}

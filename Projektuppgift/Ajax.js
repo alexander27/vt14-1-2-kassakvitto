@@ -1,4 +1,5 @@
- function Ajax(url, callback){
+
+ function Ajax(url,callback){
 
 	var done = 4;
 	
@@ -10,7 +11,7 @@
 			
 			if(xhr.status >= 200 && xhr.status < 300 || xhr.status === 304){
 				
-				callback(xhr.responseText);
+			callback(xhr.responseText);
 			}
 			else{
 				
@@ -21,7 +22,7 @@
 	
 };
 
-xhr.open("get","http://homepage.lnu.se/staff/tstjo/labbyServer/imgviewer/" , true );
+xhr.open("get",url , true );
 
 xhr.send(null);
 
@@ -38,7 +39,7 @@ Ajax.prototype.getXHR = function(){
 		
 		try{
 			
-			//xhr = new ActiveXobject("Microsoft.XMLHTTP");
+			xhr = new ActiveXobject("Microsoft.XMLHTTP");
 		}
 		catch(error){
 			
