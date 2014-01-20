@@ -92,9 +92,9 @@ var click = {
         		 
         		 
         		 var lotsOfPics = document.createElement("img");
-        		 lotsOfPics.setAttribute("class", "lotsOfPics");
+        		 lotsOfPics.setAttribute("class", "lotsOfPics.");
         		 lotsOfPics.src = read[i].thumbURL;//:"http://homepage.lnu.se/staff/tstjo/labbyServer/imgviewer/";
-        	//	lotsOfPics.setAttribute("src", read[i].fileName);
+        		 //lotsOfPics.setAttribute("src", read[i].fileName);
         		 imgDiv.appendChild(lotsOfPics);
         		 
         		 
@@ -108,7 +108,9 @@ var click = {
 				 
 				 
 				 lotsOfPics.onclick = function(e){
-				 	
+				 	var imgId = e.target.parentNode.getAttribute("id");
+				 	console.log(read[imgId].thumbURL);
+				 	document.body.style.background="url("+read[imgId].thumbURL +")";
 				 // lotsOfPics = document.getElementById("")
 				 //bak.style['background']="url('"+url+"')";
 					

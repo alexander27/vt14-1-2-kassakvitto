@@ -45,7 +45,7 @@ q:before, q:after {
 
     
 body { 
-  background: url(pics/mario.jpg)no-repeat center center fixed; 
+  background: url(pics/windows.jpg)no-repeat center center fixed; 
    background-size:cover;
    /* width:600px;
     height:600px;
@@ -54,8 +54,8 @@ body {
 }
 #icon{
     
-    background-image:url(pics/odla.png);
-    background-size:cover;
+    background-image:url(pics/map.png);
+   background-size:cover;
     
     width:100px;
     height:100px;
