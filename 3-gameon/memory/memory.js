@@ -31,16 +31,18 @@ getPitcure:function()
 showPicture : function(id)
 {
 	var lastelement = Memory.arraycheckid.length-1;
-	if(Memory.arraycheckid[lastelement] != id) {
+	
+	if(Memory.arraycheckid[lastelement] != id) {		//kontroll om man klickar på samma
 		Memory.imagesshown++;
 		
 		var image = document.getElementById(id);
-		image.firstChild.src="pics/" + Memory.myArray[id] + ".png";
-		Memory.arraycheck.push(Memory.myArray[id]);
-		Memory.arraycheckid.push(id);
+		image.firstChild.src="pics/" + Memory.myArray[id] + ".png";		// om man klickar visas omtsvarande bild från arrayen
+		Memory.arraycheck.push(Memory.myArray[id]);	//Bild nummret
+		Memory.arraycheckid.push(id);//	// kollar positionsnr man klickat på
 
-	    lastelement = Memory.arraycheck.length-1;
+	    lastelement = Memory.arraycheck.length-1; // sista klicket och bildvädet sparas
 	    
+							//																		//är samma
 	    if(Memory.imagesshown == 2 && Memory.arraycheck.length > 1 && (Memory.arraycheck[lastelement] == Memory.arraycheck[lastelement-1]))
 	    {
 	    	Memory.turns++;
@@ -65,14 +67,14 @@ showPicture : function(id)
 	    }
 	
 	    else{
-	        
+	        								//om två bilder visas  plusas med ett
 			if(Memory.imagesshown ==2) {
 		        
 		        Memory.turns++;
 		        
 		        setTimeout(function(){
 		      
-                    if (image.value === 0){
+                    if (image.value === 0){			//kollar så att bilden inte ingår i tidigare hittad par
                        
 	                    image.firstChild.src = "pics/0.png";
 	                    var imagebefore = document.getElementById(Memory.arraycheckid[Memory.arraycheckid.length-2]);
@@ -82,7 +84,7 @@ showPicture : function(id)
                     }
                     else{
                         image.firstChild.src="pics/"+ Memory.myArray[id] + ".png";
-                    }
+                   	}
                     Memory.arraycheckid = [];
                     Memory.arraycheck = [];
                     Memory.imagesshown = 0;
@@ -93,15 +95,7 @@ showPicture : function(id)
 	}
 },
 
- /*  // console.log(this.myArray);
-    
-    
-//  var tabel = drawPicture();
-  //  game.appendChild(tabel, Memory.myArray);
-    
-},
 
-*/
 drawPicture : function(){
  var content = document.getElementById("container");
  var row;
@@ -110,7 +104,7 @@ drawPicture : function(){
  var image;
   
    
-   
+   //spelplan
    for (var y = 0; y < this.rows; y++){
    row = document.createElement("div");
    row.className = "row";
@@ -131,7 +125,7 @@ drawPicture : function(){
                 
                 if (Memory.imagesshown < 2)
                 {
-                    Memory.showPicture(this.id);
+                    Memory.showPicture(this.id);		//bara två klickbara
                     
                 }
                 
