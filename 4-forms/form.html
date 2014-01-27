@@ -1,41 +1,51 @@
-{"type":"CONNECT","data":{"myClientId":"G5qqd1dzT9PVMgOHAEfl","myUserId":"384926","fs":"rw","authorPool":{"384926":1},"colorPool":{"384926":{"r":255,"g":146,"b":45}},"users":{"384926":{"uid":"384926","fullname":"alexander27","email":"ad222in@student.lnu.se","created_at":"2013-12-27T16:44:15.000Z","updated_at":"2013-12-27T16:44:15.000Z","deleted_at":null}},"onlineUserIds":["384926"],"chatHistory":[]},"command":"vfs-collab"}<!doctype html>
+<!DOCTYPE html>
 <html lang="sv">
-
 <head>
-	<meta charset="utf-8" />
-	<title>Formulär</title>
-	<script src="form.js"></script>
-	<link rel="stylesheet" href="form.css" />
+            
+	<meta charset="UTF-8" />
+ 	<title>Validering</title>
+ 	<style>
+ 		.error {
+ 			background-color: #F7A1A1;
+ 		}
+ 	</style>
+ 	<link rel="stylesheet" href="form.css" /> 
 </head>
 
-<body>
-
-		<form action="http://voyager.lnu.se/tekinet/kurser/dtt/wp_webbteknik/process_form.php" method="post" id="myForm" >
-<fieldset>
-    
-    <label for= "firstName">Namn</label>
-        <div class="firstNameDiv">
-                <input type"text" name="firstName" id="firstName">   
-        </div>
-    
-    <label for= "lastName">Efternamn</label>
-        <div class="lastNameDiv">
-                <input type"text" name="lastName" id="lastName">    
-        </div>
-        
-    <label for= "postNumber">Postnummer</label>
-        <div class="postNumberDiv">
-                <input type"text" name="postNumber" id="postNumber">    
-        </div>
-    
-    <label for= "email">E-post</label>
-        <div class="eMailDiv">
-                <input type"text" name="email" id="email">    
-        </div>
-    
-    
-    
-    <label for= "price">Prismodell</label>
-       
-            <select id="price" name = "price">    
+    <body id="body">
+    <div id="container">
+   
+        <form id="myForm" action="http://voyager.lnu.se/tekinet/kurser/dtt/wp_webbteknik/process_form.php" method="post">
+        <div>
+            <h1>Fyll i din betalningsplan</h1>
+            <ul>
             
+                <li>Förnamn: </li>
+                <li id="firstnamefield"><input id="firstname" type="text" name="firstname"></li>
+                
+                <li>Efternamn: </li>
+                <li id="lastnamefield"><input id="lastname" type="text" name="lastname"></li>
+                
+                <li>Postnummer: </li>
+                <li id="postalcodefield"><input id="postalcode" type="text" name="postalcode"></li>
+                
+                <li>E-post: </li>
+                <li id="emailfield"><input id="email" type="text" name="email"></li>
+                  
+                <li>Prismodell: </li>
+                <li><select id="pricemodel" name="pricemodel"><option value="low">Låg</option></select></li>
+                
+            </ul>
+
+            <input type="submit" value="Genomför köp" class="submit" id="first_submit">
+            
+        </div>
+        </form> 
+         
+      
+    </div>
+    
+    <script type="text/javascript" src="form.js"></script>
+    </body>
+</html>
+
