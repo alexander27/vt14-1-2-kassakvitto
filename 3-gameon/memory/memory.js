@@ -13,7 +13,7 @@ var Memory =  {
          x:0,
     turns: 0,
 
-
+	//hej
 init : function (e){
    
  
