@@ -5,9 +5,18 @@ window.onload = function(){
 	
 	var birthday = function(date){
 		
-
-
-			// Din kod här.
+	var	fodelsedag =new Date(Date.parse(date)); 
+	var nudatum = new Date();
+	
+	nudatum.setHours(0);
+	nudatum.setMinutes(0);
+	nudatum.setSeconds(0);
+	nudatum.setMilliseconds(0);
+	fodelsedag.setHours(0);
+	fodelsedag.setMinutes(0);
+	fodelsedag.setSeconds(0);
+	fodelsedag.setMilliseconds;(0);
+				// Din kod här.
 
 
 

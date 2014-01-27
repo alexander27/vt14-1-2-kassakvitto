@@ -4,6 +4,45 @@ window.onload = function(){
 
 	// I denna funktion ska du skriva koden för att hantera "spelet"
 	var convertString = function(str){
+		
+	var konstring="";
+	
+	if(str.trim()=="")
+	{
+		
+		throw new Error("FEL! Du måste ange en text");
+		alert("hej")
+	}
+	
+	
+	for (var i = 0; i < str.length; i++)
+	{
+		
+		var R =str[i];
+	
+	
+		
+		if(R==="a"||R==="A")
+		{
+			konstring +="#";		
+			continue;
+		}
+	
+		if(R==R.toLowerCase())
+		{
+			konstring += R.toUpperCase();			
+			continue;
+		}
+		 if(R===R.toUpperCase())
+		{
+			
+			konstring += R.toLowerCase();
+			continue;
+		}
+	}	
+	return konstring;
+	
+
 		// Plats för förändring.		
 		// Returnera den konverterade strängen.
 		// Vid fel, kasta ett undantag med ett meddelande till användaren. 
