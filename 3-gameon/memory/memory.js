@@ -118,7 +118,7 @@ drawPicture : function(){
             box.id = boxcounter;
             box.value =0;
             image = document.createElement("img");
-            //image.src = "pics/0.png";
+            
             image.setAttribute("src", "pics/0.png");
             box.appendChild(image);
             box.onclick = function (){
@@ -133,7 +133,7 @@ drawPicture : function(){
             
             row.appendChild(box);
             boxcounter++;
-           // document.createElement()
+         
             
     }
         content.appendChild(row);
