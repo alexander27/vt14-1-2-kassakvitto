@@ -110,7 +110,7 @@ var click = {
 				 lotsOfPics.onclick = function(e){
 				 	var imgId = e.target.parentNode.getAttribute("id");
 				 	console.log(read[imgId].thumbURL);
-				 	document.body.style.background="url("+read[imgId].thumbURL +")";
+				 	document.body.style.background="url("+read[imgId].URL +")";
 				 // lotsOfPics = document.getElementById("")
 				 //bak.style['background']="url('"+url+"')";
 					
