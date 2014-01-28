@@ -3,9 +3,9 @@
 window.onload = function(){
 
 	
-	var birthday = function(date){
+	
 		
-	var	fodelsedag =new Date(Date.parse(date)); 
+	/*var	fodelsedag =new Date(Date.parse(date)); 
 	var nudatum = new Date();
 	
 	nudatum.setHours(0);
@@ -17,9 +17,41 @@ window.onload = function(){
 	fodelsedag.setSeconds(0);
 	fodelsedag.setMilliseconds;(0);
 				// Din kod här.
+*/
 
 
 
+
+
+ 
+
+ var birthday = function(date){
+
+   
+      
+ var   month = +(month) - 1; // sätter - 1 för att januari räknas som 0
+   var day = +(day);
+    
+    var newDate = new Date(); // hämtar dagens datum.
+
+    var myDate = new Date(newDate.getFullYear(), month, day); // Hämtar datum som användare matat in.
+
+    if (myDate <= newDate) { // Om man redan fyllt år så börjar den räkna på nästa år.
+
+        myDate.setFullYear(myDate.getFullYear()+1); // Så att den förstår att födelsedagen inträffar nästa år.
+    }
+    else { // Om man inte fyllt år än.
+
+        myDate.setFullYear(myDate.getFullYear()); // Födelsedagen har inte inträffat ¨på det nuvarande året.
+    }
+
+    // Omvandlar millisec till dagar. 
+    var millisec = 1000 * 60 * 60 * 24;
+
+    // Den angivna datumen minus dagens datum delat med millisec så får du ut antalet dagar tills du fyller år... i "dagar".
+
+    return (Math.ceil((myDate.getTime() - newDate.getTime()) / millisec));
+	
 
 	};
 	// ------------------------------------------------------------------------------
