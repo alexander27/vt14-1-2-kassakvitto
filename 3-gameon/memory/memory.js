@@ -36,7 +36,7 @@ showPicture : function(id)
 		Memory.imagesshown++;
 		
 		var image = document.getElementById(id);
-		image.firstChild.src="pics/" + Memory.myArray[id] + ".png";		// om man klickar visas omtsvarande bild från arrayen
+		image.firstChild.src="pics/" + Memory.myArray[id] + ".png";		// om man klickar visas motsvarande bild från arrayen
 		Memory.arraycheck.push(Memory.myArray[id]);	//Bild nummret
 		Memory.arraycheckid.push(id);//	// kollar positionsnr man klickat på
 
@@ -115,13 +115,16 @@ drawPicture : function(){
        
            
             box = document.createElement("a");
-            box.id = boxcounter;
+            box.setAttribute("href","#"); 
+			box.id = boxcounter;
             box.value =0;
             image = document.createElement("img");
             //image.src = "pics/0.png";
             image.setAttribute("src", "pics/0.png");
             box.appendChild(image);
-            box.onclick = function (){
+            
+			
+			box.onclick = function (){
                 
                 if (Memory.imagesshown < 2)
                 {
