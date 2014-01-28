@@ -1,5 +1,5 @@
 
- /*/   
+  /*  
  html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -20,7 +20,7 @@ time, mark, audio, video {
 	font: inherit;
 	vertical-align: baseline;
 }
-/* HTML5 display-role reset for older browsers 
+ HTML5 display-role reset for older browsers 
 
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
@@ -43,19 +43,19 @@ q:before, q:after {
 	content: none;
 }
 
-  */  
+    */
 body { 
   background: url(pics/windows.jpg)no-repeat center center fixed; 
    background-size:cover;
-   /* width:600px;
+    width:600px;
     height:600px;
-     */   
+        
   
 }
 #icon{
     
     background-image:url(pics/map.png);
-   background-size:cover;
+    background-size:cover;
     
     width:100px;
     height:100px;
@@ -140,23 +140,25 @@ height:40px;
 	}
 .imgDiv
 	{
+        text-align:center;
 		display:inline-block;
 		background-color:gray;
 		padding: 0px 0px 0px 0px;
 		margin: 0px 0px 0px 0px;
+        
 	}
 	
 .lotsOfPics
 	{
 		display:block;
 		margin-right: auto;
-		margin-left: auto;
+		margin:0 auto;
 		
 	}
 	
 .piclink
 	{
-		margin: 0px 2px 0px 0px;
+		margin: 0 /2px 0px 0px;
 		padding: 0px 0px 0px 0px;
 	}
 
@@ -173,4 +175,3 @@ height:40px;
 
 
 
-/*;*/
