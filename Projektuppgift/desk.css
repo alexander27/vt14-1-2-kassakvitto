@@ -1,5 +1,5 @@
 
-  /*  
+   
  html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -43,12 +43,12 @@ q:before, q:after {
 	content: none;
 }
 
-    */
+    
 body { 
   background: url(pics/windows.jpg)no-repeat center center fixed; 
    background-size:cover;
-    width:600px;
-    height:600px;
+   /* width:600px;
+    height:500px;*/
         
   
 }
@@ -63,31 +63,36 @@ body {
     
 }
 #icon1{
-
+float:left;
 width:40px;
 height:40px;
 }
 
 #popup
 	{
+		border: 3px solid black;
+		border-radius:25px;
 		padding: 0px 0px 0px 0px;
 		margin: 0px 0px 0px 0px;
-		height:350px;
-		width:250px;
-		background-color:green;
-		
+		height:400px;
+		width:305px;
+		background-color:white;
+	
 	}
 #container
 	{
-		height: 350px;
-		width: 250px;
+		/*height: 350px;*/
+		/*width: 250px;*/
 		padding: 0px 0px 0px 0px;
 		margin: 0px 0px 0px 500px;
 	}
-	#header
+#header
 	{
-		border: 1px solid black;
-		background-color:gray;
+		height:50px;
+		border: 3px solid black;
+		border-top-left-radius:20px;
+		border-top-right-radius:20px;
+		background-color:#6896C8;
 		padding: 0px 0px 0px 0px;
 		margin: 0px 0px -1px 0px;
 
@@ -95,12 +100,18 @@ height:40px;
 	
 #footer
 	{
-		width: 243px;
-		height: 21px;
+		
+		
+		border: 3px solid black;
+		
+		border-bottom-left-radius:20px;
+		border-bottom-right-radius:20px;
+		width: 295px;
+		height: 35px;
 		margin: -1px 0px 0px 0px;
 		padding: 0px 0px 0px 5px;
-		border: 1px solid black;
-		background-color:gray;
+		
+		background-color:#6896C8;
 	}
 
 #kryss
@@ -114,6 +125,7 @@ height:40px;
 	
 #loader
 	{
+		float:left;
 		width:10px;
 		height:10px;	
 		padding: 0px 0px 0px 0px;
@@ -122,38 +134,44 @@ height:40px;
 	
 #middle
 	{
-		background-color:#C0C0C0;
-		border: 1px solid black;
+		background-color:#6896C8;
+		border: 3px solid black;
 		height:300px;
-		width:248px;
-		margin: 0px 0px 0px 0px;
+		width:300px;
+		margin-left: 0px 0px 0px 0px;
 		padding: 0px 0px 0px 0px;
 		overflow-x:auto;
 		overflow-y:auto;
+	
 	}
 	
 #Ploader
 	{
-		padding: 0px 0px 0px 0px;
-		margin: 5px 160px 0px 0px;
-		float:right;
+		float:left;
+		/*padding-left: 0px 0px 0px 0px;*/
+		margin: 0px 0px 0px 0px;
+		color:white;
 	}
 .imgDiv
 	{
         text-align:center;
 		display:inline-block;
-		background-color:gray;
-		padding: 0px 0px 0px 0px;
+		background-color:white;
+		/*padding: 0px 0px 0px 0px;
 		margin: 0px 0px 0px 0px;
-        
+        */
+       margin-left:20px;
+       margin-top:10px;
 	}
 	
 .lotsOfPics
 	{
-		display:block;
-		margin-right: auto;
-		margin:0 auto;
 		
+		display:block;
+		margin-top:-20px;
+		/*margin-right: auto;
+		margin-left: auto;
+		*/
 	}
 	
 .piclink
@@ -164,10 +182,28 @@ height:40px;
 
 #iconText
 	{
-		margin: -18px 0px 0px 0px;
+		
+		
+		margin: -45px 0px 0px 0px;
 		padding: 0px 0px 0px 30px;
+		
 	}
+#iconText, p{
 	
+    margin-top: 4px;
+    font-family: verdana;
+    font-size: 0.7em;
+    font-weight: bold;
+    color: white;
+    float: left;
+	/*text-align:center;
+	margin-top:1px;
+	
+	width:40px;
+	height:30px; 	
+	margin-left: 10px;
+	font-family: Verdana;*/
+}	
 #gone
 	{
 		display:none;

@@ -20,7 +20,7 @@ var click = {
 
 			open = true;
 			
-			// Fönstret kan nu öppnas
+		
 			
 			var url = "http://homepage.lnu.se/staff/tstjo/labbyServer/imgviewer/";
 
@@ -52,7 +52,7 @@ var click = {
 			header.appendChild(closeLink);
 			
 			var icon = document.createElement("img");
-			icon.setAttribute("src", "pics/jord.jpg");
+			icon.setAttribute("src", "pics/boll.png");
 			icon.setAttribute("id", "icon1");
 			header.appendChild(icon);
 			
@@ -93,8 +93,8 @@ var click = {
         		 
         		 var lotsOfPics = document.createElement("img");
         		 lotsOfPics.setAttribute("class", "lotsOfPics.");
-        		 lotsOfPics.src = read[i].thumbURL;//:"http://homepage.lnu.se/staff/tstjo/labbyServer/imgviewer/";
-        		 //lotsOfPics.setAttribute("src", read[i].fileName);
+        		 lotsOfPics.src = read[i].thumbURL;
+        	
         		 imgDiv.appendChild(lotsOfPics);
         		 
         		 
@@ -111,22 +111,21 @@ var click = {
 				 	var imgId = e.target.parentNode.getAttribute("id");
 				 	console.log(read[imgId].thumbURL);
 				 	document.body.style.background="url("+read[imgId].URL +")";
-				 // lotsOfPics = document.getElementById("")
-				 //bak.style['background']="url('"+url+"')";
+			
 					
 				var imgId = e.target.parentNode.getAttribute("id");
 				 	
-        			//	console.log(read[imgDiv].;
+        		
         				
         				document.body.style.background = "url"+ read[i] +")";
         			
         	
-        			//imgId.style['background']="url('"+url+"')";
+        		
 					        			
         			
         		}
 				 
-        		 
+        		
         		 //hämtar ut storlek på varje och jämför om den du har är större än dän som du får...
         		 
         		 if(width < read[i].thumbWidth){
@@ -134,8 +133,7 @@ var click = {
         			}
         			if(height < read[i].thumbHeight){
         				height = read[i].thumbHeight;
-        				
-        			}
+        			
         		 
         		}
         		//ny foor-loop som sätter storlek beroende på den som kommer från den förra...
@@ -144,10 +142,15 @@ var click = {
         		
         		for ( i = 0; i < imgDivs.length; i++){
         			
-        			imgDivs[i].style.width = width + "px";
-        			imgDivs[i].style.height = height + "px";
+        			imgDivs[i].style.width = width +20+ "px";
+        			imgDivs[i].style.height = height +20+ "px";
+        		/*	imgDivs.style['margin-left'] = "10px";
+                    imgDivs.style['margin-top'] = "10px";
+                    imgDiv.style['float'] = "left";*/
+        			}
         		}
         		
+        			 
         			footer.removeChild(loader);
         			footer.removeChild(Ploader);
         			
