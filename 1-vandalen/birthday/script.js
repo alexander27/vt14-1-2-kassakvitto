@@ -4,56 +4,105 @@ window.onload = function(){
 
 	
 	
-		
-	/*var	fodelsedag =new Date(Date.parse(date)); 
-	var nudatum = new Date();
-	
-	nudatum.setHours(0);
-	nudatum.setMinutes(0);
-	nudatum.setSeconds(0);
-	nudatum.setMilliseconds(0);
-	fodelsedag.setHours(0);
-	fodelsedag.setMinutes(0);
-	fodelsedag.setSeconds(0);
-	fodelsedag.setMilliseconds;(0);
-				// Din kod här.
-*/
 
+	    var birthday = function(date){
+        
+        var bdim = new Date(Date.parse(date));  // Inmatat värde som är en sträng                                      
+                                                // konverteras till ett date-
+                                                // objekt
+        
+        var nowdate = new Date();               // Nytt date-objekt (aktuellt datum)                  
+        
+        nowdate.setHours(0);                    // Nollställ klocan
+        nowdate.setMinutes(0);                  // på dagens datum
+        nowdate.setSeconds(0);
+        nowdate.setMilliseconds(0);
+        bdim.setHours(0);                       // och på det inmatade datumet
+        bdim.setMinutes(0);                     // som har skapats som ett 
+        bdim.setSeconds(0);                     // date-objekt
+        bdim.setMilliseconds(0);
+                                                // eftersom vi arbetar enbart med datum
 
+        
+        var y = date[0] + date[1] + date[2] + date[3];  // Hämta datumet från
+        var m = date[5] + date[6];                      // STRÄNGEN som matades    
+        var d = date[8] + date[9];                      // in. Födelsedag
+                                                        // är ju datumbaserat!
+                                                    
 
+            if (isNaN(d))                       // Kontrollerar att 29:e Feb
+            {                                   // inte matas in om
+                throw new Error("Felaktigt datum!"); // det inte är skottår      
+            }
+            
+            if (bdim > nowdate)                 // Kontrollera så att inmatat
+	        {                                   // inte ligger i framtiden. 
+	            throw new Error("Födelsedagen måste vara tidigare än dagens datum.");
+	        }
 
-
- 
-
- var birthday = function(date){
-
-   
-      
- var   month = +(month) - 1; // sätter - 1 för att januari räknas som 0
-   var day = +(day);
+        
+        var nowyear = nowdate.getFullYear();    // Aktuellt år
+	    
+	    var birthdatethisyear = new Date(nowyear,m-1,d);    // Användarens födelsedag
+                                                            // i det aktuella året
+                                                            // som ett date-objekt
+	   
+	    console.log(birthdatethisyear);
+	    var birthdateinmilli = birthdatethisyear.getTime(); // Födelsedagen aktuellt
+	                                                        // år i milisekunder
+	    
+	    var difference = nowdate - birthdateinmilli;        // Antalet millisekunder
+	                                                        // mellan dagens datum i m.s.
+	                                                        // jämförs med födelsedagen i m.s.
+	    
+	    var seconds = difference / 1000;                
+	    var minutes = seconds / 60;
+	    var hours = minutes / 60;
+	    var days = hours / 24;                              // Ovan nämnda uttryckt i antal dagar
+	    
+	    days = days -(days % 1);                            // Endast hela dagar är intressant.
+	    console.log(days);
+	    
+    	    if (difference > 0)                             // Om födelsedagen redan har varit 
+    	    {                                               // i aktuellt år
+    	        var nextbirthdate = new Date(nowyear+1, m-1, d); // Nästa födelsedag är då efterkommande år
+    	        var nextbirthinmilli = nextbirthdate.getTime();  // men månad och dag är ju samma (som nytt date-objekt)
+    	        
+    	        var newdifference = nextbirthinmilli - nowdate;  // Jämför då dagens datum med den kommande födelsedagen i m.s.
+    	        
+    	        var dseconds = newdifference / 1000;            
+    	        var dminutes = dseconds / 60;
+    	        var dhours = dminutes / 60;
+    	        var ddays = dhours / 24;                    // Få denna skillnad uttryckt i dagar
+                
+                    if (ddays % 1 !=0)          
+                    {
+                        ddays = ddays - (ddays % 1)
+                    }                                       // Endast hela dagar är intressant
+                
+                return ddays;	                            // Returnera detta antal dagar.
+    	    }
+    	    
+	    else                                            // Om födelsedagen i år inte har inträffat ännu
+	    {                                               // får vi negativt antal dagar.
+	        days = 0 - days;                            // Konvertera till motsvarande positivt heltal     
+    	        if (days % 1 !=0)
+                    {
+                        days = days - (days % 1)        // Endast hela dagar är intressant.
+                    }
     
-    var newDate = new Date(); // hämtar dagens datum.
+    	        return days;                            // Returnera detta antal dagar
+    	    }
+	    
 
-    var myDate = new Date(newDate.getFullYear(), month, day); // Hämtar datum som användare matat in.
+			// Din kod här.
 
-    if (myDate <= newDate) { // Om man redan fyllt år så börjar den räkna på nästa år.
 
-        myDate.setFullYear(myDate.getFullYear()+1); // Så att den förstår att födelsedagen inträffar nästa år.
-    }
-    else { // Om man inte fyllt år än.
 
-        myDate.setFullYear(myDate.getFullYear()); // Födelsedagen har inte inträffat ¨på det nuvarande året.
-    }
-
-    // Omvandlar millisec till dagar. 
-    var millisec = 1000 * 60 * 60 * 24;
-
-    // Den angivna datumen minus dagens datum delat med millisec så får du ut antalet dagar tills du fyller år... i "dagar".
-
-    return (Math.ceil((myDate.getTime() - newDate.getTime()) / millisec));
-	
 
 	};
+ 
+
 	// ------------------------------------------------------------------------------
 
 
