@@ -17,7 +17,7 @@ namespace KassaKvitto
         protected void Button1_Click(object sender, EventArgs e)
         {
             var input = TextBox1.Text;
-            int C = Model.Receipt.GetTotalAmount(input);
+            
         }
     }
 }
