@@ -1,0 +1,14 @@
+﻿h1 {
+font-family:  serif;
+font-size:50px;
+
+}
+
+#topBar {
+    width:900px;
+    height:30px;
+    background-color:silver;
+}
+#TextBox1{
+float:left;
+}
