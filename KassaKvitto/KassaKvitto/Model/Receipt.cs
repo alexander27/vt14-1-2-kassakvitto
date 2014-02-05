@@ -7,82 +7,51 @@ namespace KassaKvitto.Model
 {
     public class Receipt
     {
+
         private double _subtotal;
-    
-        public double DiscountRate
-        {
-            
-            get
-            {
-                return _subtotal;
-            }
-           
-            private set
-            {
-            }
-          
-        }
 
-        public double MoneyOf
+        public double DiscountRate { get; private set; }
+
+        public double MoneyOff { get; private set; }
+
+        public double Subtotal
         {
-       
-            get
+
+             get
             {
                 return _subtotal;
             }
-          
+
+
+
             private set
             {
-            }
-        }
-        
-        public  double Subtotal
-        {
-            
-            public get
-            {
-                return _subtotal;
-            }
-             
-            private   set
-            {
-                if(value < 0)
+                if (value <= 0)
                 {
-                    throw new ArgumentException("Fel fel");
+                    throw new ArgumentOutOfRangeException();
                 }
-
                 else
                 {
                     _subtotal = value;
                 }
-          
-            }           
+            }
+
+
         }
 
-        public double Total
-        {
-            get
-            {
-               
-            }
-                        
-            set
-            {
-                   
-            }
-         }
-   
-    
-        public  void  Calculate(double subtotal)
+        public double Total { get;private set; }
+
+
+        public void Calculate(double subtotal)
         {
             Total = subtotal;
-            
+
             if (Total > 0 && Total < 500)
             {
                 DiscountRate = 0;
             }
 
-            if (Total > 500  && Total < 1000)
+            if (Total > 500 && Total < 1000)
             {
                 DiscountRate = 0.05;
             }
@@ -97,20 +66,19 @@ namespace KassaKvitto.Model
                 DiscountRate = 0.15;
             }
 
-            MoneyOf = Total * DiscountRate;
-            Subtotal = Total - MoneyOf;
+            MoneyOff = Total * DiscountRate;
+            Subtotal = Total - MoneyOff;
 
 
 
 
         }
+        
 
-
-        public Receipt(double input)
+        public Receipt(double subtotal)
         {
-            this.Calculate(input);
+            this.Calculate(subtotal);
         }
-
+        
     }
-
 }

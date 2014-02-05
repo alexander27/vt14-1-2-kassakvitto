@@ -19,13 +19,10 @@
         <p>
             <asp:Label ID="Label2" runat="server" Text="Kr"></asp:Label>
         </p>
-        <asp:Button ID="Button1" runat="server" Text="Beräkna rabatt" OnClick="Button1_Click" />
-        
-        
-        
-        <div>
-
-        </div>
+        <asp:Button ID="Button3" runat="server" Text="Beräkna rabatt" OnClick="Button1_Click" />
+       <div>
+         <asp:Label ID="Label3" runat="server" Text=""></asp:Label>
+       </div>
     </form>
 </body>
 </html>
