@@ -3,56 +3,44 @@
 window.onload = function(){
 
 	// I denna funktion ska du skriva koden för att hantera "spelet"
-	var convertString = function(str){
-		
-	var konstring="";
-	
-	if(str.trim()=="")
-	{
-		
-		throw new Error("FEL! Du måste ange en text");
-		alert("hej")
-	}
-	
-	
-	for (var i = 0; i < str.length; i++)
-	{
-		
-		var R =str[i];
-	
-	
-		
-		if(R==="a"||R==="A")
-		{
-			konstring +="#";		
-			continue;
-		}
-	
-		if(R==R.toLowerCase())
-		{
-			konstring += R.toUpperCase();			
-			continue;
-		}
-		 if(R===R.toUpperCase())
-		{
-			
-			konstring += R.toLowerCase();
-			continue;
-		}
-	}	
-	return konstring;
-	
-
-		// Plats för förändring.		
-		// Returnera den konverterade strängen.
-		// Vid fel, kasta ett undantag med ett meddelande till användaren. 
-	
-
-
-
-
-
-
+		var convertString = function(str){
+	    
+	    var convertedString = "";
+	    
+	    if (str.trim() == "")
+	    {
+	        throw new Error("FEL! Du måste ange en text.");
+        }
+	    
+	    
+	    for (var i=0; i<str.length; i++)
+	    {
+	            
+            var c = str[i];
+            
+            if (c === "a" || c==="A")
+            {
+                convertedString +="#";
+                continue;
+            }
+            
+            if (c === c.toUpperCase())
+            {
+               convertedString += c.toLowerCase();
+               continue;
+            }
+                
+            if (c === c.toLowerCase())
+            {
+                convertedString += c.toUpperCase();
+                continue;
+            }
+	      
+	    }
+	    
+	    return convertedString;
+	    
+	  
 	};
 	// ------------------------------------------------------------------------------
 
