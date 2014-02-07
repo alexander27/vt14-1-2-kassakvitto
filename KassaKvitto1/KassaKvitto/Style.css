@@ -1,0 +1,26 @@
+﻿h1 {
+    font-family: serif;
+    font-size: 50px;
+}
+
+#topBar {
+    width: 900px;
+    height: 30px;
+    background-color: silver;
+}
+
+#TextBox1 {
+    float: left;
+}
+
+#BB {
+    width:200px;
+
+    border: 2px solid;
+    border-radius: 2px;
+}
+#placeHolder label {
+    border: 2px solid;
+    border-radius: 2px;
+
+}

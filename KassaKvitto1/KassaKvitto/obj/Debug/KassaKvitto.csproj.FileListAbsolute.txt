@@ -1,0 +1,10 @@
+C:\Users\ad222in\Desktop\1dv403-laborationer\KassaKvitto\KassaKvitto\obj\Debug\KassaKvitto.csprojResolveAssemblyReference.cache
+C:\Users\ad222in\Desktop\1dv403-laborationer\KassaKvitto\KassaKvitto\bin\KassaKvitto.dll
+C:\Users\ad222in\Desktop\1dv403-laborationer\KassaKvitto\KassaKvitto\bin\KassaKvitto.pdb
+C:\Users\ad222in\Desktop\1dv403-laborationer\KassaKvitto\KassaKvitto\obj\Debug\KassaKvitto.dll
+C:\Users\ad222in\Desktop\1dv403-laborationer\KassaKvitto\KassaKvitto\obj\Debug\KassaKvitto.pdb
+P:\C#\KassaKvitto1\KassaKvitto\bin\KassaKvitto.dll
+P:\C#\KassaKvitto1\KassaKvitto\bin\KassaKvitto.pdb
+P:\C#\KassaKvitto1\KassaKvitto\obj\Debug\KassaKvitto.dll
+P:\C#\KassaKvitto1\KassaKvitto\obj\Debug\KassaKvitto.pdb
+P:\C#\KassaKvitto1\KassaKvitto\obj\Debug\KassaKvitto.csprojResolveAssemblyReference.cache
